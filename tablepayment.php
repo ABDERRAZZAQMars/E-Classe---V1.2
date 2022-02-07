@@ -11,40 +11,26 @@
         </tr>
     </thead>
     <tbody>
-       <?php
-        $payment = [
-            ['Name'=>'Karthi','Payment Schedule'=>'First','Bill Number'=>'00012223','Amount Paid'=>'DHS 100,000','Balance amount'=>'DHS 500,000','Date'=>'05-Jan, 2022'],
-            ['Name'=>'Karthi','Payment Schedule'=>'First','Bill Number'=>'00012223','Amount Paid'=>'DHS 100,000','Balance amount'=>'DHS 500,000','Date'=>'05-Jan, 2022'],
-            ['Name'=>'Karthi','Payment Schedule'=>'First','Bill Number'=>'00012223','Amount Paid'=>'DHS 100,000','Balance amount'=>'DHS 500,000','Date'=>'05-Jan, 2022'],
-            ['Name'=>'Karthi','Payment Schedule'=>'First','Bill Number'=>'00012223','Amount Paid'=>'DHS 100,000','Balance amount'=>'DHS 500,000','Date'=>'05-Jan, 2022']
-        ];
-
-        echo'
-            <tr class="d-none">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        ';
-
-        foreach ($payment as $value)
-        {
-            echo'
-                <tr>
-                    <td style="vertical-align: middle;">'.$value['Name'].'</td>
-                    <td style="vertical-align: middle;">'.$value['Payment Schedule'].'</td>
-                    <td style="vertical-align: middle;">'.$value['Bill Number'].'</td>
-                    <td style="vertical-align: middle;">'.$value['Amount Paid'].'</td>
-                    <td style="vertical-align: middle;">'.$value['Balance amount'].'</td>
-                    <td class="text-nowrap" style="vertical-align: middle;">'.$value['Date'].'</td>
-                    <td style="vertical-align: middle;"><img src="./Icones/view.svg" alt=""></td>
-                </tr>
-            ';
+        <?php
+        include("cnx.php");
+        $sql = "SELECT id, nom, payment_schedule, bill_number, amount_paid, balance_amount, datepayment from payment_details order by id DESC;";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) { 
+                echo
+                '<tr style="background-color: white;">
+                    <td style="vertical-align: middle;">' . $row['nom'] . '</td>
+                    <td style="vertical-align: middle;">' . $row['payment_schedule'] . '</td>
+                    <td style="vertical-align: middle;">' . $row['bill_number'] . '</td>
+                    <td style="vertical-align: middle;">DHS ' . $row['amount_paid'] . '</td>
+                    <td class="text-nowrap" style="vertical-align: middle;">DHS ' . $row['balance_amount'] . '</td>
+                    <td class="text-nowrap" style="vertical-align: middle;">' . $row['datepayment'] . '</td>
+                    <td><img src="./Icones/view.svg" alt="view_icone"></td>
+                    </tr>';
+            }
+        } else {
+            echo "0 results";
         }
-       ?>
+        ?>
     </tbody>
 </table>

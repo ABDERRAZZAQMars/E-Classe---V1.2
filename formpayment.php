@@ -35,26 +35,30 @@
                 </div>
                 <div class="conatiner-fluid mx-auto mt-3" style="width: 95%;">
                     <div class="row" style="overflow-x: auto;">
-                        <form action="addstudent.php" method="POST" style="width: 800px; border-radius: 10px;" class="container bg-white mx-auto">
+                        <form action="addpayment.php" method="POST" style="width: 800px; border-radius: 10px;" class="container bg-white mx-auto">
                             <div class="p-2">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrer full name" name="name">
+                                <label for="nom" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrer full name" name="nom">
                             </div>
                             <div class="p-2">
-                                <label for="email" class="form-label">E-mail</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer your e-mail" name="email">
+                                <label for="payment_schedule" class="form-label">Payment schedule</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer your e-mail" name="payment_schedule">
                             </div>
                             <div class="p-2">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer your phone" name="phone">
+                                <label for="bill_number" class="form-label">Bill number</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer your phone" name="bill_number">
                             </div>
                             <div class="p-2">
-                                <label for="enroll_number" class="form-label">Enroll Number</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer enroll number" name="enroll_number">
+                                <label for="amount_paid" class="form-label">Amount paid</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer enroll number" name="amount_paid">
                             </div>
                             <div class="p-2">
-                                <label for="date_of_admission" class="form-label">Date Of Admission</label>
-                                <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Entrer date of admission" name="date_of_admission">
+                                <label for="balance_amount" class="form-label">Balance amount</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer date of admission" name="balance_amount">
+                            </div>
+                            <div class="p-2">
+                                <label for="datepayment" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Entrer date of admission" name="datepayment">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-info m-3 text-white fw-bold">Submit</button>

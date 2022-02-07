@@ -47,23 +47,23 @@
                         <form method="POST" style="width: 800px; border-radius: 10px;" class="container bg-white mx-auto">
                             <div class="p-2">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrer full name" name="name" value="<?php echo $updat['name']; ?>">
+                                <input type="text" class="form-control" id="exampleInputEmail1"  name="name" value="<?php echo $updat['name']; ?>">
                             </div>
                             <div class="p-2">
                                 <label for="email" class="form-label">E-mail</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer your e-mail" name="email" value="<?php echo $updat['email']; ?>">
+                                <input type="text" class="form-control" id="exampleInputPassword1"  name="email" value="<?php echo $updat['email']; ?>">
                             </div>
                             <div class="p-2">
                                 <label for="phone" class="form-label">Phone</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer your phone" name="phone" value="<?php echo $updat['phone']; ?>">
+                                <input type="text" class="form-control" id="exampleInputPassword1"  name="phone" value="<?php echo $updat['phone']; ?>">
                             </div>
                             <div class="p-2">
                                 <label for="enroll_number" class="form-label">Enroll Number</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer enroll number" name="enroll_number" value="<?php echo $updat['enroll_number']; ?>">
+                                <input type="text" class="form-control" id="exampleInputPassword1"  name="enroll_number" value="<?php echo $updat['enroll_number']; ?>">
                             </div>
                             <div class="p-2">
                                 <label for="date_of_admission" class="form-label">Date Of Admission</label>
-                                <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Entrer date of admission" name="date_of_admission" value="<?php echo $updat['date_of_admission']; ?>">
+                                <input type="date" class="form-control" id="exampleInputPassword1"  name="date_of_admission" value="<?php echo $updat['date_of_admission']; ?>">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" name="submit" class="btn btn-info m-3 text-white fw-bold">Submit</button>

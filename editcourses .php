@@ -47,14 +47,14 @@
                         <form method="POST" style="width: 800px; border-radius: 10px;" class="container bg-white mx-auto">
                             <div class="p-2">
                                 <label for="titre" class="form-label">Titre</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrer full titre" name="titre">
+                                <input type="text" class="form-control" id="exampleInputEmail1" value="<?php echo $updat['titre']; ?>" name="titre">
                             </div>
                             <div class="p-2">
                                 <label for="temps" class="form-label">Temps</label>
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Entrer your temps" name="temps">
+                                <input type="text" class="form-control" id="exampleInputPassword1" value="<?php echo $updat['temps']; ?>" name="temps">
                             </div>
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-info m-3 text-white fw-bold">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-info m-3 text-white fw-bold">Submit</button>
                             </div>
                         </form>
                         <?php

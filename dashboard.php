@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-    include("cnx.php");
+include("cnx.php");
 ?>
 
 <head>
@@ -20,13 +20,13 @@
             <input type="checkbox" id="menu" class="d-none">
             <!--Side Bar-->
             <?php
-                include("./sidebar.php");
+            include("./sidebar.php");
             ?>
             <!--Nave Bar-->
             <div class="col">
                 <div class="row">
                     <?php
-                        include("./navbar.php");
+                    include("./navbar.php");
                     ?>
                     <!--Cartes-->
                     <div class="conatiner-fluid">
@@ -38,7 +38,15 @@
                                         <h5 class="pt-3">Students</h5>
                                     </div>
                                     <div class="text-end pe-4 pb-2">
-                                        <h1>243</h1>
+                                        <h1>
+                                            <?php
+                                            include("cnx.php");
+                                            $sql = "SELECT * FROM students";
+                                            $res = mysqli_query($conn, $sql);
+                                            $nrows = mysqli_num_rows($res);
+                                            echo "$nrows";
+                                            ?>
+                                        </h1>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +57,15 @@
                                         <h5 class="pt-3">Course</h5>
                                     </div>
                                     <div class="text-end pe-4 pb-2">
-                                        <h1>13</h1>
+                                        <h1>
+                                            <?php
+                                            include("cnx.php");
+                                            $sql = "SELECT * FROM courses";
+                                            $res = mysqli_query($conn, $sql);
+                                            $nrows = mysqli_num_rows($res);
+                                            echo "$nrows";
+                                            ?>
+                                        </h1>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +76,16 @@
                                         <h5 class="pt-3 text-gray">Payments</h5>
                                     </div>
                                     <div class="text-end pe-4 pb-2">
-                                        <h1><span class="fs-3">Dhs</span> 556,000</h1>
+                                        <h1><span class="fs-3">Dhs</span>
+                                            <?php
+                                                include("cnx.php");
+                                                $nsum = "SELECT SUM(amount_paid) AS sumprix FROM payment_details";
+                                                $res = mysqli_query($conn, $nsum);
+                                                $total = mysqli_fetch_assoc($res);
+                                                $sumtotal = $total['sumprix'];
+                                                echo $sumtotal;
+                                            ?>
+                                        </h1>
                                     </div>
                                 </div>
                             </div>

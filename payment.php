@@ -27,8 +27,11 @@
                 </div>
                 <div class="d-flex justify-content-between mx-auto mt-3" style="width: 95%;border-bottom: 1px solid gray;">
                     <h1>Payment Details</h1>
-                    <img src="./Icones/up.svg" alt="">
-                </div>
+                    <div>
+                        <img src="./Icones/up.svg" alt="">
+                        <a href="formpayment.php"><button type="button" class="btn btn-info ms-3 text-white">ADD NEW PAYMENT</button></a>
+                    </div>
+                   </div>
                 <div class="conatiner-fluid mx-auto mt-3" style="width: 95%;">
                     <div class="row" style="overflow-x: auto;">
                         <?php
